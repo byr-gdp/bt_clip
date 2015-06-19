@@ -27,8 +27,8 @@ overflow: hidden; font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, 
 #navBar .active { background: #ccc;}
 #navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}
 
-.txt { margin-top: 18%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;}
-.txt_small{ font-size: 24px; color: #fff; text-align: center; }
+.txt { margin-top: 30%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;}
+.txt_small{ font-size: 24px; color: #fff; text-align: center; margin-top: 24px;}
 a.a_down{text-decoration: none; font-size: 18px; color: gray; display: block; text-align: center;}
 /*img{ margin-top: 100px;}*/
 /*img.show_png{display: inline-block; width: 60%; height: auto; position: relative; left: 20%;}*/
@@ -49,12 +49,26 @@ p.txt_muted{
 .right{
 	display: inline-block;
 	width: auto;
+	/*position: relative;*/
 }
 .right img{
-	position: relative;
-	top: 200px;
-	width: 240px;
-	margin-left: 100px;
+	/*position: relative;*/
+	position: absolute;
+	width: 60%;
+	right: 20%;
+	top: 15%;
+	/*top: 200px;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*margin-top: -250px;*/
+	width: 250px;
+	/*height: 600px;*/
+	/*height: 750px;*/
+	/*margin-left: -150px;*/
+	/*margin-top: 375px;*/
+}
+.txt_index{
+	margin-top: 15%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;
 }
 </style>
 </head>
@@ -63,11 +77,11 @@ p.txt_muted{
 <div id="pageContain">
 	<div class="page page1 current">
 		<div class="contain">
-				<p class="txt">你好，欢迎使用BT夹子</p>
+				<p class="txt_index">你好，欢迎使用BT夹子</p>
+				<a class="a_down" href="https://fir.im/y6nh">下载链接：https://fir.im/y6nh</a>
 				<p class="txt_small">别着急下载，往下翻翻</p>
 				<!-- <p class="txt_muted">https://fir.im/y6nh</p> -->
-				<a class="a_down" href="https://fir.im/y6nh">下载链接：https://fir.im/y6nh</a>
-				<p class="txt_small">下面来看看BT夹子的功能</p>
+				<!-- <p class="txt_small">下面来看看BT夹子的功能</p> -->
 				<img src="iconfont-xia.png" class="show_xia">
 
 		</div>
@@ -116,7 +130,8 @@ p.txt_muted{
 		<div class="contain">
 			<div class="left">
 				<p class="txt">不仅如此</p>
-				<p class="txt_small">由于走的是IPv6，只需要极少的校外流量来更新编辑部信息和通知信息</p>
+				<p class="txt_small">由于走的是IPv6</p>
+				<p class="txt_small">只需要极少的校外流量来更新编辑部信息和通知信息</p>
 			</div>
 			<div class="right">
 				<img src="mainpage2.png" class="show_png">
@@ -126,7 +141,7 @@ p.txt_muted{
 
 	<div class="page page6">
 		<div class="contain">
-			<p class="txt">所以，尽情享用吧!</p>
+			<p class="txt_index">所以，尽情享用吧!</p>
 			<!-- <p class="txt_small">点击右上角用“浏览器打开”第一页点击下载链接即可</p> -->
 			<a class="a_down" href="https://fir.im/y6nh">下载链接：https://fir.im/y6nh</a>
 
