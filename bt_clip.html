@@ -27,7 +27,8 @@ overflow: hidden; font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, 
 #navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}
 
 .txt { margin-top: 10%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;}
-.txt_small{ font-size: 24px; color: #fff; text-align: center; }
+.txt_big{ font-size: 36px; color: #fff; text-align: center; margin-top: 24px;}
+.txt_small{ font-size: 24px; color: #fff; text-align: center; margin-top: 24px;}
 img{ margin-top: 100px;}
 img.show_png{ width: 480px; height: auto; text-align: center; position: relative; left: 50%; margin-left: -240px;}
 img.show_down{display: inline-block; width: 60%; height: auto; position: relative; left: 20%;}
@@ -35,10 +36,16 @@ img.show_xia{
 	display: inline-block; width: 20px; height: 20px; position: absolute; left: 50%; margin-left: -10px; bottom: 20%;
 }
 .img_xia:hover{transform: scale(1.3); -webkit-transform: scale(1.3);}
-p.txt_muted{
+.txt_muted{
 	color: gray;
 	text-align: center;
 	font-size: 18px;
+	text-decoration: none;
+	display: block;
+	margin-top: 24px;
+}
+.txt_index{
+	margin-top: 50%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;
 }
 </style>
 </head>
@@ -47,9 +54,10 @@ p.txt_muted{
 <div id="pageContain">
 	<div class="page page1 current">
 		<div class="contain">
-				<p class="txt">你好，欢迎使用BT夹子</p>
-				<p class="txt_muted">https://fir.im/y6nh</p>
-				<p class="txt_small">别着急下载，往下翻翻</p>
+				<p class="txt_index">你好，欢迎使用BT夹子</p>
+				<!-- <p class="txt_muted">https://fir.im/y6nh</p> -->
+				<p class="txt_big">请点击右上角“用浏览器打开”以获得更好的体验</p>
+				<p class="txt_small">往下翻翻看看有哪些功能</p>
 
 				<!-- <p class="txt_small">下面来看看BT夹子的功能</p> -->
 				<img src="iconfont-xia.png" class="show_xia">
@@ -93,8 +101,10 @@ p.txt_muted{
 
 	<div class="page page6">
 		<div class="contain">
-			<p class="txt">所以，尽情享用吧!</p>
-			<p class="txt_small">点击右上角用“浏览器打开”第一页点击下载链接即可</p>
+			<p class="txt_index">所以，尽情享用吧!</p>
+			<!-- <p class="txt_small">点击右上角用“浏览器打开”来下载体验BT夹子</p> -->
+			<a href="https://fir.im/y6nh" class="txt_muted">点击我进入下载页面</a>
+
 			<!-- <img src="appurl.png" class="show_down"> -->
 
 		</div>
