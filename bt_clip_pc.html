@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>BT Clip</title>
+<style>
+body,  div,  p { margin: 0; padding: 0;}
+ul { list-style: none;}
+html { overflow: hidden;}
+body { width: 100%;  *cursor: default;
+overflow: hidden; font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;}
+#pageContain { overflow: hidden;}
+.page { display: none; width: 100%; height: 100%; overflow: hidden; position: absolute; top: 0; left: 0;}
+.contain { width: 100%; height: 100%; display: none; position: relative; z-index: 0;}
+.current .contain, .slide .contain { display: block;}
+.current { display: block; z-index: 1;}
+.slide { display: block; z-index: 2;}
+.swipe { display: block; z-index: 3; transition-duration: 0ms !important; -webkit-transition-duration: 0ms !important;}
+.page1 { background: #37c1e3;}
+.page2 { background: #009922;}
+.page3 { background: #992211;}
+.page4 { background: rgb(125,170,190);}
+.page5 { background: #556B2F;}
+.page6 { background: rgb(253,152,39);}
+#navBar { z-index: 3; position: absolute; top: 30%; right: 3%;}
+#navBar .active { background: #ccc;}
+#navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}
+
+.txt { margin-top: 18%; font-size: 50px; color: #fff; text-align: center; margin-bottom: 50px;}
+.txt_small{ font-size: 24px; color: #fff; text-align: center; }
+a.a_down{text-decoration: none; font-size: 18px; color: gray; display: block; text-align: center;}
+/*img{ margin-top: 100px;}*/
+/*img.show_png{display: inline-block; width: 60%; height: auto; position: relative; left: 20%;}*/
+img.show_down{width: 200px; height: 200px; position: absolute; left: 50%; margin-left: -100px; margin-top: 50px;}
+img.show_xia{
+	 width: 20px; height: 20px; position: absolute; left: 50%; margin-left: -10px; bottom: 35%;
+}
+.img_xia:hover{transform: scale(1.3); -webkit-transform: scale(1.3);}
+p.txt_muted{
+	color: gray;
+	text-align: center;
+	font-size: 18px;
+}
+.left{
+	width: 50%;
+	display: inline-block;
+}
+.right{
+	display: inline-block;
+	width: auto;
+}
+.right img{
+	position: relative;
+	top: 200px;
+	width: 240px;
+	margin-left: 100px;
+}
+</style>
+</head>
+
+<body>
+<div id="pageContain">
+	<div class="page page1 current">
+		<div class="contain">
+				<p class="txt">你好，欢迎使用BT夹子</p>
+				<p class="txt_small">别着急下载，往下翻翻</p>
+				<!-- <p class="txt_muted">https://fir.im/y6nh</p> -->
+				<a class="a_down" href="https://fir.im/y6nh">下载链接：https://fir.im/y6nh</a>
+				<p class="txt_small">下面来看看BT夹子的功能</p>
+				<img src="iconfont-xia.png" class="show_xia">
+
+		</div>
+	</div>
+
+	<div class="page page2">
+		<div class="contain">
+			<div class="left">
+				<p class="txt">浏览最新BT信息</p>
+				<p class="txt_small">不用看一堆密密麻麻的种子列表了</p>
+				<p class="txt_small">上课、睡前、蹲坑各种无聊场合刷一刷</p>
+			</div>
+			<div class="right">
+				<img src="main.png" class="show-png">
+			</div>
+		</div>
+	</div>
+
+	<div class="page page3">
+		<div class="contain">
+			<div class="left">
+				<p class="txt">怕错过就先收藏吧</p>
+				<p class="txt_small">看到想下的种子，点击五角星收藏</p>
+				<p class="txt_small">收藏的种子可以在收藏页看到</p>
+		</div>
+			<div class="right">
+				<img src="favorite.gif" class="show_png">
+			</div>
+		</div>
+	
+	</div>
+
+	<div class="page page4">
+		<div class="contain">
+			<div class="left">
+			<p class="txt">个性化定制首页内容</p>
+			<p class="txt_small">自定义设置首页，电影、动漫、纪录片，听你安排</p>
+			</div>
+			<div class="right">
+				<img src="list.png" class="show_png">
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page5">
+		<div class="contain">
+			<div class="left">
+				<p class="txt">不仅如此</p>
+				<p class="txt_small">由于走的是IPv6，只需要极少的校外流量来更新编辑部信息和通知信息</p>
+			</div>
+			<div class="right">
+				<img src="mainpage2.png" class="show_png">
+			</div>
+		</div>
+	</div>
+
+	<div class="page page6">
+		<div class="contain">
+			<p class="txt">所以，尽情享用吧!</p>
+			<!-- <p class="txt_small">点击右上角用“浏览器打开”第一页点击下载链接即可</p> -->
+			<a class="a_down" href="https://fir.im/y6nh">下载链接：https://fir.im/y6nh</a>
+
+			<img src="appurl.png" class="show_down">
+
+		</div>
+	</div>
+</div>
+
+<ul id="navBar">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+</ul>
+
+<script src="http://cdn.dowebok.com/143/js/fullPage.min.js"></script>
+<script>
+var runPage;
+runPage = new FullPage({
+	id: 'pageContain',
+	// slideTime: 800,
+	effect: {
+		transform: {
+			translate: 'Y',
+			scale: [1, 1],
+			rotate: [0, 0]
+		},
+		opacity: [0, 1]
+	},
+	mode: 'wheel,touch,nav:navBar',
+	easing: 'ease'
+});
+</script>
+
+</body>
+</html>
